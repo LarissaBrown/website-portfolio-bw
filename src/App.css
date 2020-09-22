@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+ background-color: rgb(31, 30, 30);
 }
+ body {
+  background: url("./LarissaSelfPortraitPhoto.jpg")no-repeat center fixed;
+  background-size: cover;
+  
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  gap: 10px;
+  grid-auto-rows: minmax(70px, auto);
+ 
   }
+
+.sideItem {
+  background-color: rgb(230, 220, 220);
+  opacity: .7;
+  grid-column: 5/11;
+  grid-row: 1/11;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.menu {
+  color: rgb(235, 229, 229);
+  font-family: Helvetica;
+  font-size: 3vw;
+  padding-top: 10%;
+  padding-left: 5%;
+  background-color: black;
+  grid-column: 9/11;
+  grid-row: 1/2;
+  z-index: 0;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hello {
+  color: black;
+  font-family: Helvetica;
+  font-size: 4em;
+  grid-column: 6/9;
+  grid-row: 2/4;
+  z-index: 1;
+}
+.name {
+  color:black;
+  font-family: Helvetica;
+  font-size: 2em;
+  grid-column: 6/9;
+  grid-row: 6/9;
+  z-index: 1;
+}
+.iAm {
+  color:black;
+  font-family: Helvetica;
+  font-size: 2em;
+  grid-column: 6/10;
+  grid-row: 4/6;
+  z-index: 1;
 }
