@@ -3,7 +3,7 @@ html {
  background-color: rgb(31, 30, 30);
 }
  body {
-  background: url("./LarissaSelfPortraitPhoto.jpg")no-repeat center fixed;
+  background: url('src/LarissaSelfPortraitPhoto.jpg')no-repeat center fixed;
   background-size: cover;
   
  }
@@ -22,40 +22,93 @@ html {
   grid-column: 5/11;
   grid-row: 1/11;
 }
-
+.menu-container {
+ grid-column: 9/10;
+ grid-row: 2/3;
+ z-index: 1;
+}
 .menu {
-  color: rgb(235, 229, 229);
-  font-family: Helvetica;
-  font-size: 3vw;
-  padding-top: 10%;
-  padding-left: 5%;
-  background-color: black;
-  grid-column: 9/11;
-  grid-row: 1/2;
-  z-index: 0;
+  background: #dbd7d7;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
 
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #dddddd;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: #020101;
+  padding: 15px 20px;
+  display: block;
 }
 .hello {
   color: black;
-  font-family: Helvetica;
-  font-size: 4em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
   grid-column: 6/9;
   grid-row: 2/4;
   z-index: 1;
 }
+span {
+  font-size: .8em;
+}
 .name {
+  margin:0;
+  padding: 0;
   color:black;
-  font-family: Helvetica;
-  font-size: 2em;
-  grid-column: 6/9;
-  grid-row: 6/9;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  grid-column: 6/10;
+  grid-row: 4/6;
   z-index: 1;
 }
 .iAm {
   color:black;
-  font-family: Helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 2em;
   grid-column: 6/10;
-  grid-row: 4/6;
+  grid-row: 6/9;
   z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+.linkedin {
+  grid-column: 7/8;
+  grid-row: 10/11;
+  z-index: 1;
+}
+.github {
+  grid-column: 8/9;
+  grid-row: 10/11;
+  z-index: 1;
+}
+.resume {
+  grid-column: 9/10;
+  grid-row: 10/11;
+  z-index:1;
 }
