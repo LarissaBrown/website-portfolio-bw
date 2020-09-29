@@ -29,7 +29,7 @@ const Menu = () => {
         <>
              <div className="menu-container">
              <button onClick={onClick} className="menu-trigger">
-                <img src= "https://img.icons8.com/ios-filled/64/squared-menu.png" alt="menu"/>
+                <img className="menu-img"src= "https://static.thenounproject.com/png/696519-200.png"  alt="menu"/>
              </button>
              <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
