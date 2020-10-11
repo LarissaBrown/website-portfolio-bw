@@ -201,48 +201,67 @@ img.menu-img {
   padding: 20% 10% 3% 10%;
 
 }
+.frame {
+  box-shadow: 10px 10px 10px rgb(48, 47, 47);
+  border: 5px solid whitesmoke;
+}
 
 .js-todo {
-  grid-column: 5/7;
-  grid-row: 3/5;
-  background-color: blue;
+  grid-column: 8/10;
+  grid-row: 7/9;
+  background-color:black;
   z-index: 1;
-  color: white;
+  color: rgba(255, 255, 255, 0);
+  background: url("./ShoppingListJS.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 
 }
 
 .axios-todo {
   grid-column: 8/10;
   grid-row: 4/6;
-  background-color: yellow;
   z-index: 1;
-  color: black;
-
+  color: rgb(0, 0, 0, .1);
+  background: url("./Axios-ToDo.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100%;
+  opacity: .9;
+  
 }
 
 .backend {
   grid-column: 6/8;
   grid-row: 6/8;
-  background-color: whitesmoke;
+  background-color: black;
   z-index:1;
-  color:black;
+  color:white;
 
 }
 
-.coming-soon1 {
+.react-todo {
   grid-column: 3/5;
   grid-row: 2/4;
-  background-color: white;
   z-index: 1;
-  color: black;
-
+  color: rgb(0, 0, 0, .2);
+  background: url("./ReactTodoHitList.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100%;
 }
-
+.coming-soon1 {
+  grid-column: 5/7;
+  grid-row: 8/10;
+  background-color: black;
+  color: whitesmoke;
+  z-index: 1;
+}
 .coming-soon2 {
   grid-column: 2/4;
   grid-row: 4/6;
-  background-color: yellow;
-  color: black;
+  background-color:black;
+  color: white;
   z-index: 1;
 
 }
@@ -250,36 +269,48 @@ img.menu-img {
 .wireframe {
   grid-column: 3/5;
   grid-row: 6/8;
-  background-color: red;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   z-index: 1;
+  background: url("./FigmaWireframe.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100%;
   
 }
 
 .meme-generator {
   grid-column: 2/4;
   grid-row: 8/10;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   z-index: 1;
 
 }
 
 .api-website {
-  grid-column: 8/10;
-  grid-row: 7/9;
+  
+  grid-column: 5/7;
+  grid-row: 4/6;
   background-color: red;
   z-index: 1;
-  color: white;
+  color: rgb(255, 255, 255, .2);
+  background: url("./ArtKuRandomHaiku.png");
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  background-size: 100%;
 
 }
 
 .group-project {
-  grid-column: 5/7;
-  grid-row: 8/10;
+ 
+  grid-column: 6/8;
+  grid-row: 2/4;
   background-color: black;
   z-index: 1;
-  color: white;
+  color: rgba(255, 255, 255, 0.014);
+  background: url("./GroupProjectForum.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 
 }
 

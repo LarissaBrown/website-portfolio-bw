@@ -1,16 +1,17 @@
 import React from "react"
 import { Switch, Route } from "react-router-dom"
 import emailjs from 'emailjs-com'
-import { Button } from '@material-ui/core'
+//import { Button } from '@material-ui/core'
 
 
 
-function Contact() {
-   emailjs.init('user_oQB8bFJjV5VpevGum4IEO')      
+
+function ContactUs() {
+       
     function sendEmail(e) {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'user_oQB8bFJjV5VpevGum4IEO')
+        emailjs.sendForm('user_oQB8bFJjV5Vpe', 'template_fsiw1as', e.target, 'user_oQB8bFJjV5VpevGum4IEO')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -20,7 +21,7 @@ function Contact() {
 
   return (
        <Switch>
-            <Route path="/Contact" render={() =>
+            <Route path="/ContactUs" render={() =>
                 <> 
                     <div className="sideItem"></div>
                     <div className="contact-info">
@@ -36,7 +37,7 @@ function Contact() {
                         <input type="email" name="user_email" />
                         <label>Message</label>
                         <textarea name="message" />
-                        <Button type="submit" value="Send">SEND</Button>
+                        <input type="submit" value="Send"/>
                     </form>
                       <a className="linkedin" href="https://linkedin.com/in/larissa-j-brown"><img className="linkedin"  src={require("./linkedin.png")} alt="linked-in"/></a> 
                       <a className="github" href="https://github.com/LarissaBrown"><img className="github" src={require("./GitHub_Logo.png")} alt="git-hub"/></a>
@@ -47,4 +48,4 @@ function Contact() {
         
     )
 }
-export default Contact
+export default ContactUs
