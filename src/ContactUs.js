@@ -1,23 +1,33 @@
-import React from "react"
+import React, {useState} from "react"
 import { Switch, Route } from "react-router-dom"
 import emailjs from 'emailjs-com'
 //import { Button } from '@material-ui/core'
 
-
+const initInputs = {
+    user_name: "",
+    contact_number: "",
+    user_email: ""
+}
 
 
 function ContactUs() {
+       const [inputs, setInputs] = useState(initInputs)
        
     function sendEmail(e) {
         e.preventDefault();
-
+        
         emailjs.sendForm('user_oQB8bFJjV5Vpe', 'template_fsiw1as', e.target, 'user_oQB8bFJjV5VpevGum4IEO')
         .then((result) => {
             console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-      });
+           setInputs(initInputs)
+           console.log(inputs)
+           alert("Your email has been sent.")
+        },(error) => {
+            console.log(error.text)});
+        
     }
+    
+    
 
   return (
        <Switch>
@@ -33,10 +43,13 @@ function ContactUs() {
                         <input type="hidden" name="contact_number" />
                         <label>Name</label>
                         <input type="text" name="user_name" />
+                        <br></br>
                         <label>Email</label>
                         <input type="email" name="user_email" />
+                        <br></br>
                         <label>Message</label>
                         <textarea name="message" />
+                        <br></br>
                         <input type="submit" value="Send"/>
                     </form>
                       <a className="linkedin" href="https://linkedin.com/in/larissa-j-brown"><img className="linkedin"  src={require("./linkedin.png")} alt="linked-in"/></a> 
