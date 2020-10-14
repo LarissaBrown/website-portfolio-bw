@@ -7,6 +7,7 @@ const Menu = () => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive]= useState(false);
     const onClick = () => setIsActive(!isActive);
+   
 
     useEffect(()=> {
         const pageClickEvent = (e) => {
@@ -27,7 +28,7 @@ const Menu = () => {
 
     return(
         <>
-             <div className="menu-container">
+             <div className="menu-container" >
              <button onClick={onClick} className="menu-trigger">
                 <img className="menu-img"src= "https://static.thenounproject.com/png/696519-200.png"  alt="menu"/>
              </button>

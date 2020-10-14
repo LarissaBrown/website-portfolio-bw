@@ -3,31 +3,36 @@ import { Switch, Route } from "react-router-dom"
 import emailjs from 'emailjs-com'
 //import { Button } from '@material-ui/core'
 
-const initInputs = {
+const emptyForm = {
     user_name: "",
-    contact_number: "",
-    user_email: ""
+    message: "",
+    user_email: "",
+
 }
 
 
 function ContactUs() {
-       const [inputs, setInputs] = useState(initInputs)
        
+      const[values, setValues] = useState(emptyForm)
+       
+
     function sendEmail(e) {
         e.preventDefault();
         
         emailjs.sendForm('user_oQB8bFJjV5Vpe', 'template_fsiw1as', e.target, 'user_oQB8bFJjV5VpevGum4IEO')
         .then((result) => {
-            console.log(result.text);
-           setInputs(initInputs)
-           console.log(inputs)
            alert("Your email has been sent.")
+           console.log(result.text);
+           setValues(emptyForm)
         },(error) => {
-            console.log(error.text)});
-        
+            console.log(error.text)}); 
     }
-    
-    
+    function handleChange(e){
+        const {name, value} = e.target
+        setValues(prevValues =>({...prevValues, [name]: value}))
+    }
+
+   
 
   return (
        <Switch>
@@ -42,13 +47,13 @@ function ContactUs() {
                     <form className="contact-form" onSubmit={sendEmail}>
                         <input type="hidden" name="contact_number" />
                         <label>Name</label>
-                        <input type="text" name="user_name" />
+                        <input type="text" name="user_name" value={values['user_name']} onChange={handleChange}/>
                         <br></br>
                         <label>Email</label>
-                        <input type="email" name="user_email" />
+                        <input type="email" name="user_email" value={values['user_email']} onChange={handleChange}/>
                         <br></br>
                         <label>Message</label>
-                        <textarea name="message" />
+                        <textarea name="message" value={values['message']} onChange={handleChange}/>
                         <br></br>
                         <input type="submit" value="Send"/>
                     </form>

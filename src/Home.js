@@ -5,7 +5,7 @@ function Home() {
     return (
         
          <Switch> 
-            <Route path="/" render={() => 
+            <Route path="/Home" render={() => 
             <>   
                 <div className="sideItem"></div>
                 <h1 className="hello">Hello.</h1>
