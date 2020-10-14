@@ -20,10 +20,7 @@ function ContactUs() {
         .then((result) => {
             console.log(result.text);
            setInputs(initInputs)
-<<<<<<< HEAD
-=======
            console.log(inputs)
->>>>>>> 01c167bc7324f8df90fe2959a2bbf53459a3c993
            alert("Your email has been sent.")
         },(error) => {
             console.log(error.text)});
