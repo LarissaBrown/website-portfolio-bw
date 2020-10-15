@@ -21,9 +21,9 @@ function ContactUs() {
         
         emailjs.sendForm('user_oQB8bFJjV5Vpe', 'template_fsiw1as', e.target, 'user_oQB8bFJjV5VpevGum4IEO')
         .then((result) => {
-           alert("Your email has been sent.")
            console.log(result.text);
            setValues(emptyForm)
+           //alert("Your email has been sent.")
         },(error) => {
             console.log(error.text)}); 
     }
