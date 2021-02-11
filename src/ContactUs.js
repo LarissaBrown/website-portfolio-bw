@@ -23,7 +23,7 @@ function ContactUs() {
         .then((result) => {
            console.log(result.text);
            setValues(emptyForm)
-           //alert("Your email has been sent.")
+           alert("Your email has been sent.")
         },(error) => {
             console.log(error.text)}); 
     }
@@ -40,9 +40,7 @@ function ContactUs() {
                 <> 
                     <div className="sideItem"></div>
                     <div className="contact-info">
-                        <h2 id="larissa-brown" >Larissa Brown</h2>
-                        <h3>larisa.brown.johnson@gmail.com</h3>
-                        <h3 id="phone-number" >801-946-0113</h3>
+                        <h2 id="larissa-brown" ><span class="vocalizer" data-source="auto">Larissa</span> Brown</h2>
                     </div>
                     <form className="contact-form" onSubmit={sendEmail}>
                         <input type="hidden" name="contact_number" />
