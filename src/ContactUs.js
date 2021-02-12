@@ -40,7 +40,7 @@ function ContactUs() {
                 <> 
                     <div className="sideItem"></div>
                     <div className="contact-info">
-                        <h2 id="larissa-brown" ><span class="vocalizer" data-source="auto">Larissa</span> Brown</h2>
+                        <h2 id="larissa-brown" ><span className="vocalizer" data-source='auto' data-lang='Hebrew'>Larissa</span>(lah-ree-sah) Brown</h2>
                     </div>
                     <form className="contact-form" onSubmit={sendEmail}>
                         <input type="hidden" name="contact_number" />
